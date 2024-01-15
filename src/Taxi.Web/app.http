@@ -1,0 +1,198 @@
+# For more info on HTTP files go to https://aka.ms/vs/httpfile
+POST https://www.gosuslugi.ru/api/nsi/v1/dictionary/rfp_check_dm_nsud_rfp
+cookie: acc_t=eyJ2ZXIiOjEsInR5cCI6IkpXVCIsInNidCI6ImFjY2VzcyIsImFsZyI6IlJTMjU2In0.eyJuYmYiOjE3MDE4NDUxMDIsInNjb3BlIjoiaHR0cDpcL1wvZXNpYS5nb3N1c2x1Z2kucnVcL3Vzcl9pbmY_bW9kZT13Jm9pZD0xMTM0NDE2MjI1IGh0dHA6XC9cL2VzaWEuZ29zdXNsdWdpLnJ1XC91c3Jfc2VjP21vZGU9dyZvaWQ9MTEzNDQxNjIyNSBodHRwOlwvXC9lc2lhLmdvc3VzbHVnaS5ydVwvdXNyX3RybT9tb2RlPXcmb2lkPTExMzQ0MTYyMjUgb3BlbmlkIiwiaXNzIjoiaHR0cDpcL1wvZXNpYS5nb3N1c2x1Z2kucnVcLyIsInVybjplc2lhOnNpZCI6ImY1MGY3NzIxLTBiYWEtMjNiMS1lNTg4LTAxNWE4YzI1N2M4NyIsInVybjplc2lhOnNial9pZCI6MTEzNDQxNjIyNSwiZXhwIjoxNzAxODU1OTAyLCJpYXQiOjE3MDE4NDUxMDIsImNsaWVudF9pZCI6IlBHVSJ9.BIdLDQ0OFP5l9HNQ-o_vME_Yx1KoLBe2yH0IF56Z7KM1DUB5me82hxb8JVydslNwqFg9z8NP6CK0-4p0nAg-EO4dq9kWUYusPpi01Isd2xcJZhLApI7IJ6_u4fedNGB3R9r0JAAF36iew5-s1-3LiGFse9fYr2S2vgZvkrDlsdFLFMaMENUlC29DuILGJiVpEdIW06_T7rHWmERf7h7rB-SCmLDg04FIEOOG57f4PoxWkE1JWhazFTwU-vPpyGOvrK90ZBv2GA-EHSfEJg81R7bwyI9xsAR8I9H5PrUXPNd_4Wb12-WZOGn2M21T6K2FZJWEIEfTRp2Q46d4b5HqAA;
+Content-Type: application/json
+
+{"filter":{"union":{"unionKind":"AND","subs":[{"simple":{"attributeName":"p_series","condition":"EQUALS","value":{"asString":"4218"}}},{"simple":{"attributeName":"p_number","condition":"EQUALS","value":{"asString":"140638"}}},{"simple":{"attributeName":"f_name","condition":"EQUALS","value":{"asString":"КОНСТАНТИН"}}},{"simple":{"attributeName":"l_name","condition":"EQUALS","value":{"asString":"КАНЦЕДАЛ"}}}]}},"treeFiltering":"ONELEVEL","pageNum":1,"pageSize":"10000","parentRefItemValue":"","selectAttributes":["*"],"tx":""}
+###
+
+POST https://www.gosuslugi.ru/api/service/60021102/scenario/getNextStep
+cookie: acc_t=eyJ2ZXIiOjEsInR5cCI6IkpXVCIsInNidCI6ImFjY2VzcyIsImFsZyI6IlJTMjU2In0.eyJuYmYiOjE3MDE4NDUxMDIsInNjb3BlIjoiaHR0cDpcL1wvZXNpYS5nb3N1c2x1Z2kucnVcL3Vzcl9pbmY_bW9kZT13Jm9pZD0xMTM0NDE2MjI1IGh0dHA6XC9cL2VzaWEuZ29zdXNsdWdpLnJ1XC91c3Jfc2VjP21vZGU9dyZvaWQ9MTEzNDQxNjIyNSBodHRwOlwvXC9lc2lhLmdvc3VzbHVnaS5ydVwvdXNyX3RybT9tb2RlPXcmb2lkPTExMzQ0MTYyMjUgb3BlbmlkIiwiaXNzIjoiaHR0cDpcL1wvZXNpYS5nb3N1c2x1Z2kucnVcLyIsInVybjplc2lhOnNpZCI6ImY1MGY3NzIxLTBiYWEtMjNiMS1lNTg4LTAxNWE4YzI1N2M4NyIsInVybjplc2lhOnNial9pZCI6MTEzNDQxNjIyNSwiZXhwIjoxNzAxODU1OTAyLCJpYXQiOjE3MDE4NDUxMDIsImNsaWVudF9pZCI6IlBHVSJ9.BIdLDQ0OFP5l9HNQ-o_vME_Yx1KoLBe2yH0IF56Z7KM1DUB5me82hxb8JVydslNwqFg9z8NP6CK0-4p0nAg-EO4dq9kWUYusPpi01Isd2xcJZhLApI7IJ6_u4fedNGB3R9r0JAAF36iew5-s1-3LiGFse9fYr2S2vgZvkrDlsdFLFMaMENUlC29DuILGJiVpEdIW06_T7rHWmERf7h7rB-SCmLDg04FIEOOG57f4PoxWkE1JWhazFTwU-vPpyGOvrK90ZBv2GA-EHSfEJg81R7bwyI9xsAR8I9H5PrUXPNd_4Wb12-WZOGn2M21T6K2FZJWEIEfTRp2Q46d4b5HqAA;
+Content-Type: application/json
+
+{
+    "scenarioDto": {
+        "serviceCode": "60021102",
+        "targetCode": "-60021102",
+        "currentScenarioId": 1,
+        "serviceDescriptorId": "60021102",
+        "currentUrl": "https://www.gosuslugi.ru/621102/1/form",
+        "finishedAndCurrentScreens": ["s1", "s3", "s_redirect"],
+        "cachedAnswers": {
+            "redirect_component": {
+                "visited": true,
+                "value": ""
+            },
+            "vitrina_data": {
+                "visited": true,
+                "value": "{\"error\":{\"code\":7,\"message\":\"Entity not found\"},\"fieldErrors\":[],\"total\":0,\"items\":[]}"
+            },
+            "check_limit": {
+                "visited": true,
+                "value": "{\"statusCode\":200,\"errorMessage\":null}"
+            }
+        },
+        "currentValue": {
+            "redirect_component": {
+                "visited": true,
+                "value": ""
+            }
+        },
+        "errors": {},
+        "uniquenessErrors": [],
+        "applicantAnswers": {
+            "w1": {
+                "visited": true,
+                "value": ""
+            },
+            "env": {
+                "visited": true,
+                "value": "{\"headers\":{\"access-control-allow-credentials\":\"true\",\"access-control-allow-headers\":\"X-Origin, Accept, Authorization, Cache-Control, Content-Type, DNT, If-Modified-Since, Keep-Alive, Origin, User-Agent, X-Mx-ReqToken, X-Requested-With, X-TimeZone-Offset, X-Origin, Accept, Authorization, srcUrl, DNT, X-Mx-ReqToken, Keep-Alive, User-Agent, X-Requested-With, If-Modified-Since, Cache-Control, Content-Type, X-Cache-Date, X-Atmosphere-tracking-id, X-B3-Spanid, X-traceid, X-Atmosphere-Framework, X-TimeZone-Offset, X-Atmosphere-Transport, test-scope, schema, x-order-id, x-form-id, X-B3-TraceId, X-B3-SpanId, X-B3-ParentSpanId, X-B3-Sampled, sentry-trace, baggage, *\",\"access-control-allow-methods\":\"GET, POST, PUT, DELETE, OPTIONS\",\"access-control-expose-headers\":\"X-Cache-Date,Authorization,Accept,X-traceid\",\"content-encoding\":\"gzip\",\"content-type\":\"application/json\",\"date\":\"Wed, 06 Dec 2023 07:18:08 GMT\",\"strict-transport-security\":\"max-age=16070400\",\"x-b3-spanid\":\"da5d0aa9d2f9436c\",\"x-b3-traceid\":\"da5d0aa9d2f9436c93f12ae6af5e4976\"},\"code\":\"200\",\"body\":{\"appPathMap\":{\"ChildrenClubs\":\"/children-clubs\"},\"identificationApiUrl\":\"https://www.gosuslugi.ru/api/identification-ms/v1/identification\",\"childrenClubsApi\":\"https://www.gosuslugi.ru/api/eaisdo-service/v1\",\"quizDataApiUrl\":\"https://www.gosuslugi.ru/api-quiz-data/quiz-data/data\",\"lkuipElection\":\"https://elections.gosuslugi.ru\",\"nsiSuggestDictionaryUrl\":\"https://www.gosuslugi.ru/api/nsi-suggest/v1\",\"dictionaryUrl\":\"https://www.gosuslugi.ru/api/nsi/v1/dictionary\",\"smevConverterUrl\":\"https://www.gosuslugi.ru/api/smev-converter/services/get\",\"schoolDictionaryUrl\":\"https://www.gosuslugi.ru/api/school/v1/dictionary/\",\"schoolSearchUrl\":\"https://www.gosuslugi.ru/api/school/v1/search/\",\"cookieDomain\":\".gosuslugi.ru\",\"validatePhotoItecoApiUrl\":\"https://www.gosuslugi.ru/api/fanid-service/v1\",\"isTraceIdOnErrorEnabled\":true,\"isSocialShareEnabled\":false,\"isAutocompleteServiceEnabled\":true,\"isHealthErrorEnabled\":true,\"isYaMetricEnabled\":false,\"yandexMapsApiKey\":\"f2172dc7-9535-4284-9b8d-fd79474265af\",\"lkApi\":\"https://www.gosuslugi.ru/api/lk\",\"isUnderConstructionModeEnabled\":true,\"isZipkinGenerationEnabled\":false,\"isZipkinSendTraceIdToHealth\":false,\"isZipkinSpanSendEnabled\":false,\"isZipkinCascadeModeEnabled\":false,\"staticDomainContentPath\":\"https://gu-st.ru/content\",\"suggestionsApiUrl\":\"https://www.gosuslugi.ru/api/suggests2\",\"galleryApiUrl\":\"https://www.gosuslugi.ru/api/gallery\",\"fileUploadApiUrl\":\"https://www.gosuslugi.ru/api/storage/v1/files\",\"unleashUrl\":\"https://www.gosuslugi.ru/api/feature-toggle\",\"unleashClientKey\":\"vome02c8c62v3a0u\",\"gibddApiUrl\":\"/form-backend/data/gibdd\",\"timeSlots\":{\"MVD\":{\"subject\":\"Выдача паспорта гражданина Российской Федерации в случае утраты (хищения) паспорта\",\"calendarName\":\"на приём в подразделения МВД РФ\",\"serviceId\":\"10000014784\",\"eserviceId\":\"555666777\",\"serviceCode\":\"-10000019911\"},\"GIBDD\":{\"subject\":\"Запись на прием\",\"calendarName\":\"Запись на прием\",\"serviceCode\":\"-10001970000\",\"serviceId\":\"10000593393\",\"eserviceId\":\"10000070732\",\"preliminaryReservation\":\"true\",\"preliminaryReservationPeriod\":\"240\",\"routeNumber\":\"46000000000\"},\"RAZBRAK\":{\"subject\":\"Регистрация расторжения брака\",\"calendarName\":\"на услугу «Регистрация расторжения брака»\",\"serviceCode\":\"-100000100821\",\"serviceId\":\"ЗагсРазводФорма12-1\",\"eserviceId\":\"10000057526\",\"preliminaryReservationPeriod\":\"1440\",\"preliminaryReservation\":\"true\",\"routeNumber\":\"45382000\"},\"BRAK\":{\"subject\":\"Регистрация заключения брака\",\"calendarName\":\"на услугу «Регистрация заключения брака»\",\"serviceCode\":\"-100000100821\",\"serviceId\":\"ЗагсБрак\",\"eserviceId\":\"10000057526\",\"preliminaryReservationPeriod\":\"1440\",\"preliminaryReservation\":\"true\",\"routeNumber\":\"45382000\"},\"DOCTOR\":{\"serviceId\":\"10001000603\",\"calendarName\":\"на прием к врачу\",\"subject\":\"Запись на прием к врачу\"},\"VACCINATION\":{\"serviceId\":\"-10000006633\",\"calendarName\":\"на вакцинацию от COVID-19\",\"subject\":\"Запись на вакцинацию от COVID-19\"},\"ROSGVARD\":{\"subject\":\"Запись на прием в Федеральную службу войск национальной гвардии Российской Федерации\",\"calendarName\":\"Запись на прием в Федеральную службу войск национальной гвардии Российской Федерации\",\"serviceCode\":\"-1000382227\",\"eserviceId\":\"10000082092\",\"preliminaryReservation\":\"false\",\"routeNumber\":\"5167746175977\"},\"BIRTH\":{\"subject\":\"Государственная регистрация рождения\",\"calendarName\":\"Получение свидетельства о рождении ребенка\",\"eserviceId\":\"10000057526\",\"preliminaryReservation\":\"true\",\"preliminaryReservationPeriod\":\"240\",\"routeNumber\":\"45382000\",\"serviceCode\":\"-100000100821\",\"serviceId\":\"ЗагсРождение\"}}}}"
+            },
+            "pd1": {
+                "visited": true,
+                "value": "{\"series\":\"4218\",\"number\":\"140638\",\"date\":\"\",\"emitter\":null,\"issueId\":null}"
+            },
+            "component_lastname": {
+                "visited": true,
+                "value": "Канцедал"
+            },
+            "component_firstname": {
+                "visited": true,
+                "value": "Константин"
+            },
+            "check_limit": {
+                "visited": true,
+                "value": "{\"statusCode\":200,\"errorMessage\":null}"
+            }
+        },
+        "cycledApplicantAnswers": {
+            "answerlist": []
+        },
+        "participants": {},
+        "display": {
+            "id": "s_redirect",
+            "name": "Перенаправление дальше по сценарию",
+            "type": "EMPTY",
+            "header": "",
+            "components": [{
+                    "id": "redirect_component",
+                    "name": "",
+                    "type": "Redirect",
+                    "label": "",
+                    "skipValidation": false,
+                    "attrs": {
+                        "actions": [{
+                                "label": "",
+                                "value": "",
+                                "type": "nextStep",
+                                "action": "getNextScreen"
+                            }
+                        ],
+                        "act": "Перенаправление по action",
+                        "refs": {}
+                    },
+                    "arguments": {},
+                    "value": "",
+                    "required": true,
+                    "sendAnalytics": false
+                }
+            ],
+            "buttons": [],
+            "hideBackButton": false,
+            "infoComponents": [],
+            "logicAfterValidationComponents": [{
+                    "id": "trobber",
+                    "name": "",
+                    "type": "RestCall",
+                    "label": "",
+                    "skipValidation": false,
+                    "attrs": {
+                        "onload": {
+                            "trobber": {
+                                "timeout": 20
+                            }
+                        },
+                        "url": "",
+                        "method": "POST",
+                        "path": "",
+                        "headers": {
+                            "Accept": "",
+                            "Content-Type": ""
+                        },
+                        "body": "",
+                        "refs": {}
+                    },
+                    "arguments": {},
+                    "value": "{\"id\":\"trobber\",\"method\":\"POST\",\"url\":\"https://www.gosuslugi.ru\",\"body\":\"\",\"serviceId\":\"60021102\",\"headers\":{\"Accept\":\"\",\"Content-Type\":\"\"},\"cookies\":{},\"formData\":{},\"filteredHealthArgs\":{}}",
+                    "required": true,
+                    "sendAnalytics": false
+                }
+            ],
+            "notSendToSp": false,
+            "forceSendToSuggestions": false,
+            "needToUpdateAdditionalParameters": false,
+            "forceDeliriumCall": false,
+            "checkSendPermission": false,
+            "arguments": {},
+            "acceptCookies": [],
+            "accepted": true,
+            "terminal": false,
+            "impasse": false,
+            "firstScreen": false
+        },
+        "logicComponents": [{
+                "id": "check_limit",
+                "name": "",
+                "type": "BackRestCall",
+                "label": "",
+                "skipValidation": false,
+                "attrs": {},
+                "arguments": {},
+                "value": "{\"statusCode\":200,\"errorMessage\":null}",
+                "required": true,
+                "sendAnalytics": false
+            }
+        ],
+        "serviceInfo": {
+            "department": {
+                "id": "10000001197",
+                "title": "Министерство внутренних дел Российской Федерации"
+            },
+            "error": "Region not found",
+            "userRegion": {
+                "name": "Москва",
+                "path": "Москва",
+                "codes": ["45000000000"],
+                "lastRegionCode": "45000000000"
+            },
+            "orderType": "ORDER",
+            "queryParams": {},
+            "formId": "form",
+            "proactivityCreated": false,
+            "deviceType": "mob",
+            "userAgent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Mobile Safari/537.36",
+            "userRegionCode": "45000000000"
+        },
+        "signInfoMap": {},
+        "attachmentInfo": {},
+        "additionalParameters": {},
+        "serviceParameters": {},
+        "generatedFiles": [],
+        "disclaimers": [],
+        "fileGenerateActions": [],
+        "cycledApplicantAnswerContext": {},
+        "gender": "M"
+    },
+    "isInviteScenario": false,
+    "canStartNew": false,
+    "health": {
+        "dictionaries": [{
+                "id": "check_limit",
+                "method": "GET",
+                "status": "OK",
+                "args": {}
+            }
+        ]
+    }
+}

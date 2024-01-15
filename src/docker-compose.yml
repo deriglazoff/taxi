@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  taxi.web:
+    image: ${DOCKER_REGISTRY-}taxiweb
+    build:
+      context: .
+      dockerfile: Taxi.Web/Dockerfile

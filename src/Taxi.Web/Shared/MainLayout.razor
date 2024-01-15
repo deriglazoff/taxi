@@ -1,0 +1,36 @@
+﻿@inherits LayoutComponentBase
+
+<MudThemeProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+<MudLayout>
+    <MudAppBar Elevation="0"> 
+     @*   <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" />*@
+        <MudIcon Size="Size.Large" Icon="@Icons.Material.Filled.DirectionsCar" />
+        <MudSpacer />
+        <MudText>8 (888) 8888-888</MudText>
+        <MudIconButton Icon="@Icons.Custom.Brands.Gmail" Color="Color.Inherit" Link="https://mail.google.com/" Target="_blank" />
+        <MudIconButton Icon="@Icons.Custom.Brands.Telegram" Color="Color.Inherit" Link="https://t.me/oskolTaxi" Target="_blank" />
+    </MudAppBar>
+    <MudDrawer @bind-Open="_drawerOpen" Elevation="1">
+        <MudDrawerHeader>
+            <MudText Typo="Typo.h6">Taxi.UI</MudText>
+        </MudDrawerHeader>
+        <NavMenu />
+    </MudDrawer>
+    <MudMainContent>
+        <MudContainer MaxWidth="MaxWidth.Large" Class="my-4 pt-4">
+            @Body
+        </MudContainer>
+    </MudMainContent>
+</MudLayout>
+
+@code {
+    bool _drawerOpen = false;
+
+    void DrawerToggle()
+    {
+        _drawerOpen = !_drawerOpen;
+    }
+}

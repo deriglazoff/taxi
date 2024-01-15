@@ -1,0 +1,56 @@
+﻿@using Telegram.Bot
+@inject IDialogService DialogService
+@inject ITelegramBotClient telegramBotClient
+@page "/"
+<PageTitle>Index</PageTitle>
+<MudText Typo="Typo.h3" GutterBottom="true">Hello!</MudText>
+<MudText Class="mb-8">Welcome to new Oskol Taxi</MudText>
+<MudCarousel Class="mud-width-full" Style="height:200px;" ShowArrows="@arrows" ShowBullets="@bullets" EnableSwipeGesture="@enableSwipeGesture" AutoCycle="@autocycle" TData="object">
+    <MudCarouselItem Transition="transition" Color="@Color.Primary">
+        <div class="d-flex" style="height:100%">
+            <MudIcon Class="mx-auto my-auto" Icon="@Icons.Custom.Brands.MudBlazor" Size="@Size.Large" />
+        </div>
+    </MudCarouselItem>
+    <MudCarouselItem Transition="transition" Color="@Color.Secondary">
+        <div class="d-flex" style="height:100%">
+            <MudIcon Class="mx-auto my-auto" Icon="@Icons.Custom.Brands.MudBlazor" Size="@Size.Large" />
+        </div>
+    </MudCarouselItem>
+    <MudCarouselItem Transition="transition">
+        <div class="d-flex" style="height:100%">
+            <MudIcon Class="mx-auto my-auto" Icon="@Icons.Custom.Brands.MudBlazor" Color="@Color.Primary" Size="@Size.Large" />
+        </div>
+    </MudCarouselItem>
+</MudCarousel>
+
+<MudForm>
+	<div class="d-flex align-center justify-space-between">
+		<MudTextField @bind-Value="From" Label="Откуда" Variant="Variant.Outlined"></MudTextField>
+		<MudTextField @bind-Value="To" Label="Куда" Variant="Variant.Outlined"></MudTextField>
+        <MudTextField Label="Дата" Variant="Variant.Outlined" Editable="true" AnchorOrigin="@Origin.CenterCenter" @bind-Value="date" />
+		<MudButton Variant="Variant.Outlined" Color="Color.Primary" OnClick="@SubmitClick">Primary</MudButton>
+	</div>
+</MudForm>
+
+@code {
+    private string From;
+    private string To;
+    private bool arrows = true;
+    private bool bullets = true;
+    private bool enableSwipeGesture = true;
+    private bool autocycle = true;
+    private Transition transition = Transition.Slide;
+
+    DateTime? date = DateTime.Today;
+
+    private void SubmitClick()
+    {
+        var options = new DialogOptions { CloseOnEscapeKey = true };
+        var parameters = new DialogParameters();
+        parameters.Add("ContentText", $"Принят заказ от сих {From} до сих {To} на {date}");
+
+        telegramBotClient.SendTextMessageAsync("-1001972414649", $"Заказ от сих {From} до сих {To} на {date}");
+   
+        DialogService.Show<DialogUsageExample_Dialog>("Заказ принят",parameters, options);
+    }
+}
